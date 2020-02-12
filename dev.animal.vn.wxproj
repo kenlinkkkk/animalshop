@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<winginx>
+  <project>
+    <name>dev.animal.vn</name>
+    <url>http://dev.animal.vn/</url>
+    <root>home/dev.animal.vn</root>
+  </project>
+</winginx>
