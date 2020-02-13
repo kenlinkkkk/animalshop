@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+use Illuminate\Support\Facades\Route;
+
+Auth::routes();
+
+Route::middleware('auth')->group(function () {
+    Route::prefix('admin')->name('admin.')->group(function () {
+        Route::get('/', function () {
+            echo 'Hello';
+        });
+    });
 });
