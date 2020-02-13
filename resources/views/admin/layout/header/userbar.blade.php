@@ -34,7 +34,10 @@
                 </div>
             </a>
             <div class="kt-notification__custom kt-space-between">
-                <a href="#" target="_blank" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</a>
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button target="_blank" class="btn btn-label btn-label-brand btn-sm btn-bold">Sign Out</button>
+                </form>
 
                 <a href="#" target="_blank" class="btn btn-clean btn-sm btn-bold">Upgrade Plan</a>
             </div>

@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Auth\LoginRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -26,7 +29,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/admin';
 
     /**
      * Create a new controller instance.
@@ -41,5 +44,19 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         return view('auth.login');
+    }
+
+    public function login(LoginRequest $request)
+    {
+        if (Auth::attempt([
+            'user_name' => $request->user_name,
+            'password' => $request->password,
+        ])) {
+            $user = Auth::user();
+        } else {
+            $request->session()->flash('login-error');
+
+            return redirect(route('login'));
+        }
     }
 }
