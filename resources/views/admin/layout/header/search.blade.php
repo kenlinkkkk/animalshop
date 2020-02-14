@@ -15,6 +15,7 @@
     <div class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-lg">
         <div class="kt-quick-search kt-quick-search--dropdown kt-quick-search--result-compact" id="kt_quick_search_dropdown">
             <form method="get" class="kt-quick-search__form">
+                @csrf
                 <div class="input-group">
                     <div class="input-group-prepend">
                         <span class="input-group-text"><i class="flaticon2-search-1"></i></span>

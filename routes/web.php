@@ -18,7 +18,7 @@ Auth::routes();
 Route::middleware('auth')->group(function () {
     Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/', function () {
-            return view('admin.layout');
+            return view('admin.index');
         })->name('index');
     });
 });
