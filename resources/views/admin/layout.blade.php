@@ -104,7 +104,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="kt-menu__submenu kt-menu__submenu--classic kt-menu__submenu--left">
                                     <ul class="kt-menu__subnav">
                                         <li class="kt-menu__item  kt-menu__item--active " aria-haspopup="true">
-                                            <a href="#" class="kt-menu__link ">
+                                            <a href="{{ route('admin.change_info') }}" class="kt-menu__link ">
                                                 <span class="kt-menu__link-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
                                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -118,7 +118,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                             </a>
                                         </li>
                                         <li class="kt-menu__item  kt-menu__item--active " aria-haspopup="true">
-                                            <a href="#" class="kt-menu__link ">
+                                            <a href="{{ route('admin.change_password') }}" class="kt-menu__link ">
                                                 <span class="kt-menu__link-icon">
                                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
                                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -263,6 +263,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <!--begin::Page Scripts(used by this page) -->
 <script src="{{ asset('assets/js/pages/dashboard.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/js/pages/custom/user/profile.js') }}" type="text/javascript"></script>
 <!--end::Page Scripts -->
 @yield('script')
 </body>
