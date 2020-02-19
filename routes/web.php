@@ -21,6 +21,7 @@ Route::middleware('auth')->group(function () {
             return view('admin.index');
         })->name('index');
 
+        Route::get('/user', 'Admin\UserController@index')->name('user');
         Route::get('/info',  'Admin\UserController@showChangeInfo')->name('change_info');
         Route::get('/password', 'Admin\UserController@showChangePassword')->name('change_password');
 

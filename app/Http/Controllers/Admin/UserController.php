@@ -16,13 +16,21 @@ class UserController extends Controller
 
     public function index()
     {
+        $users = $this->userRepository->getAll();
 
+        $data = compact('users');
+
+        return view('admin.user.index', $data);
     }
 
-    public function showChangeInfo()
+    public function showChangeInfo(Request $request)
     {
-        $user = Auth::user();
-
+        $user = null;
+        if ($request->get('u') != null) {
+            $user = $this->userRepository->find($request->get('u'));
+        } else {
+            $user = Auth::user();
+        }
         $data = compact('user');
 
         return view('admin.user.info', $data);
@@ -57,9 +65,15 @@ class UserController extends Controller
         return redirect()->back();
     }
 
-    public function showChangePassword()
+    public function showChangePassword(Request $request)
     {
-        $user = Auth::user();
+        $user = null;
+
+        if ($request->get('u') != null) {
+            $user = $this->userRepository->find($request->get('u'));
+        } else {
+            $user = Auth::user();
+        }
 
         $data = compact('user');
 
