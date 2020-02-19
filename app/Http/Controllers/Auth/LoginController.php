@@ -53,6 +53,8 @@ class LoginController extends Controller
             'password' => $request->password,
         ])) {
             $user = Auth::user();
+
+            return redirect(route('admin.index'));
         } else {
             $request->session()->flash('login-error');
 
