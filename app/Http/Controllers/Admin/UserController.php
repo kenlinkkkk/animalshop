@@ -35,6 +35,12 @@ class UserController extends Controller
         $data = $request->except('_token');
         $id_user = $request->get('u');
         $result = null;
+
+        if ($request->hasFile('avatar_file')) {
+            $file = $request->avatar_file;
+            $data['avatar'] = upload($file, config('variables.upload.one_file'));
+        }
+
         if ($id_user == null) {
             $user = Auth::user();
             $result = $this->userRepository->update($user->id, $data);
@@ -63,6 +69,20 @@ class UserController extends Controller
     public function changePassword(Request $request)
     {
         $data = $request->except('_token');
+        $user = Auth::user();
+        $result = null;
+
+        if (bcrypt($data->old_pass) == Auth::user()->password) {
+            if ($data->password == $data->confirm_password) {
+                $result = $this->userRepository->update($user->id, $data);
+            }
+        }
+
+        if ($result) {
+            $request->session()->flash('success', 'Cập nhật mật khẩu thành công');
+        } else {
+            $request->session()->flash('error', 'Cập nhật mật khẩu không thành công');
+        }
 
         return redirect()->back();
     }

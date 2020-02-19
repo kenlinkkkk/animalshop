@@ -264,12 +264,23 @@ License: You must have a valid license purchased only from themeforest(the above
 <!--begin::Page Scripts(used by this page) -->
 <script src="{{ asset('assets/js/pages/dashboard.js') }}" type="text/javascript"></script>
 <script src="{{ asset('assets/js/pages/custom/user/profile.js') }}" type="text/javascript"></script>
+
 <script>
     @if (session('success'))
-    swal('{{ session('success') }}', '', 'success');
+    swal.fire({
+        type: "success",
+        title: "Cập nhật thành công",
+        showConfirmButton: !1,
+        timer: 1500
+    });
     @endif
     @if (session('error'))
-    swal('{{ session('error') }}', '', 'error');
+    swal.fire({
+        type: "error",
+        title: "Cập nhật thất bại",
+        showConfirmButton: !1,
+        timer: 1500
+    });
     @endif
 </script>
 <!--end::Page Scripts -->

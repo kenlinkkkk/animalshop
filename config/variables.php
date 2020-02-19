@@ -30,5 +30,9 @@ return [
             'code' => 2,
             'massage' => 'Hết hàng'
         ]
+    ],
+    'upload' => [
+        1 => 'one_file',
+        2 => 'multiple'
     ]
 ];

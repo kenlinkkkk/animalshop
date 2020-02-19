@@ -143,7 +143,7 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Mật khẩu cũ</label>
+                                            <label class="col-xl-3 col-lg-3 col-form-label">Mật khẩu hiện tại</label>
                                             <div class="col-lg-9 col-xl-6">
                                                 <input class="form-control" type="password" name="old_pass">
                                             </div>
