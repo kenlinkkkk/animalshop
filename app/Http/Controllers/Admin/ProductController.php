@@ -36,6 +36,10 @@ class ProductController extends Controller
 
     public function create(Request $request)
     {
+        $data = $request->except('_token');
+
+        $data['short_tag'] = sluggify($data->name, "-", 96);
+
 
     }
 

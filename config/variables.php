@@ -18,16 +18,16 @@ return [
         ]
     ],
     'product_status' => [
-        'not_active' => [
-            'code' => 0,
+        0 => [
+            'name' => 'not_active',
             'massage' => 'Ẩn'
         ],
-        'active' => [
-            'code' => 1,
-            'massage' => 'Hiện',
+        1 => [
+            'name' => 'active',
+            'massage' => 'Còn hàng',
         ],
-        'out_stock' => [
-            'code' => 2,
+        2 => [
+            'name' => 'out_of_stock',
             'massage' => 'Hết hàng'
         ]
     ],

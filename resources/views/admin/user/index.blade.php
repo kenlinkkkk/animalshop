@@ -64,7 +64,7 @@
                                         </td>
                                         <td scope="col">{{ $user->email == null ? "null" : $user->email }}</td>
                                         <td scope="col">
-                                            @if ($user->status)
+                                            @if ($user->status == 1)
                                                 <span class="kt-badge kt-badge--brand kt-badge--inline kt-badge--pill kt-badge--rounded">Active</span>
                                             @else
                                                 <span class="kt-badge kt-badge--danger kt-badge--inline kt-badge--pill kt-badge--rounded">Deactive</span>
