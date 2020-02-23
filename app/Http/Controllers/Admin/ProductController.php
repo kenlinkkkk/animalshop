@@ -40,7 +40,7 @@ class ProductController extends Controller
 
         $data['short_tag'] = sluggify($data->name, "-", 96);
 
-
+        dd($data);
     }
 
     public function update(Request $request, $id_product)
@@ -51,5 +51,9 @@ class ProductController extends Controller
     public function delete(Request $request, $id_product)
     {
 
+    }
+
+    public function uploadFile(Request $request) {
+        dd($request);
     }
 }

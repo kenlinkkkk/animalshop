@@ -53,13 +53,18 @@
                                         <div class="form-group row">
                                             <label class="col-xl-3 col-lg-3 col-form-label">Tên</label>
                                             <div class="col-lg-9 col-xl-6">
-                                                <input class="form-control" type="password" name="old_pass">
+                                                <input class="form-control" type="text" name="old_pass">
                                             </div>
                                         </div>
                                         <div class="form-group row">
-                                            <label class="col-xl-3 col-lg-3 col-form-label">Mật khẩu mới</label>
+                                            <label class="col-xl-3 col-lg-3 col-form-label">Ảnh sản phẩm</label>
                                             <div class="col-lg-9 col-xl-6">
-                                                <input class="form-control" type="password" name="password">
+                                                <div class="dropzone dropzone-default dropzone-brand" id="kt_dropzone_2">
+                                                    <div class="dropzone-msg dz-message needsclick">
+                                                        <h3 class="dropzone-msg-title">Kéo file ảnh</h3>
+                                                    </div>
+                                                    <input type="file" name="pictures[]" multiple>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group row">

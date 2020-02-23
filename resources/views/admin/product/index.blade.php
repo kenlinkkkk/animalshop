@@ -32,8 +32,11 @@
             <div class="kt-portlet__head">
                 <div class="kt-portlet__head-label">
                     <h3 class="kt-portlet__head-title">
-                        Thông tin người dùng
+                        Thông tin sản phẩm
                     </h3>
+                </div>
+                <div class="kt-portlet__head--right pt-3">
+                    <a class="btn btn-sm btn-success" href="{{ route('admin.product.add') }}">Thêm mới sản phẩm</a>
                 </div>
             </div>
             <div class="kt-portlet__body">

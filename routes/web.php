@@ -27,6 +27,7 @@ Route::middleware('auth')->group(function () {
 
         Route::post('/change_info', 'Admin\UserController@changeInfo')->name('info');
         Route::post('/change_password', 'Admin\UserController@changePassword')->name('password');
+        Route::post('/upload_file', 'Admin\ProductController@uploadFile')->name('upload_file');
 
         Route::prefix('product')->name('product.')->group(function () {
             Route::get('/', 'Admin\ProductController@index')->name('index');
