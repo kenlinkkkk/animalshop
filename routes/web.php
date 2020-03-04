@@ -26,8 +26,9 @@ Route::middleware('auth')->group(function () {
         Route::get('/password', 'Admin\UserController@showChangePassword')->name('change_password');
 
         Route::post('/change_info', 'Admin\UserController@changeInfo')->name('info');
-        Route::post('/change_password', 'Admin\UserController@changePassword')->name('password');
-        Route::post('/upload_file', 'Admin\ProductController@uploadFile')->name('upload_file');
+        Route::post('/change-password', 'Admin\UserController@changePassword')->name('password');
+        Route::post('/upload-file', 'Admin\ProductController@uploadFile')->name('upload_file');
+        Route::post('/image-upload', 'Admin\UploadController@uploadImage')->name('upload');
 
         Route::prefix('product')->name('product.')->group(function () {
             Route::get('/', 'Admin\ProductController@index')->name('index');

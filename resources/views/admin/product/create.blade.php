@@ -59,11 +59,11 @@
                                         <div class="form-group row">
                                             <label class="col-xl-3 col-lg-3 col-form-label">Ảnh sản phẩm</label>
                                             <div class="col-lg-9 col-xl-6">
-                                                <div class="dropzone dropzone-default dropzone-brand" id="kt_dropzone_2">
+                                                <div class="dropzone dropzone-default dropzone-brand" id="kt_dropzone_2" name="myDropzone">
                                                     <div class="dropzone-msg dz-message needsclick">
                                                         <h3 class="dropzone-msg-title">Kéo file ảnh</h3>
                                                     </div>
-                                                    <input type="file" name="pictures[]" multiple>
+{{--                                                    <input type="file" name="pictures[]" multiple>--}}
                                                 </div>
                                             </div>
                                         </div>
@@ -100,4 +100,19 @@
 
 @section('script')
     <script type="text/javascript" src="{{ asset('assets/js/pages/crud/file-upload/dropzonejs.js') }}"></script>
+{{--    <script>--}}
+{{--        Dropzone.options.myDropzone = {--}}
+{{--            url: '{{ route('admin.upload') }}',--}}
+{{--            header: {--}}
+{{--                'X-CSRF-TOKEN': '{!! csrf_token() !!}'--}}
+{{--            },--}}
+{{--            autoProcessQueue: true,--}}
+{{--            uploadMultiple: true,--}}
+{{--            parallelUploads: 5,--}}
+{{--            maxFiles: 10,--}}
+{{--            maxFileSize: 5,--}}
+{{--            acceptedFiles: ".jpeg, .jpg, .gif, .png",--}}
+{{--            dictFileTooBig: 'Ảnh vượt quá 5MB',--}}
+{{--        }--}}
+{{--    </script>--}}
 @endsection
