@@ -40,39 +40,19 @@
                     <div class="main-menu-wrap">
                         <nav class="main-menu">
                             <ul>
-                                <li class="has-dropdown">
-                                    <a href="#">Home</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="index.html">Home 1</a></li>
-                                        <li><a href="index-2.html">Home 2</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="about.html">About</a></li>
-                                <li class="has-dropdown">
-                                    <a href="service.html">Services</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="service.html">Services</a></li>
-                                        <li><a href="service-details.html">Services Details</a></li>
-                                    </ul>
+                                <li>
+                                    <a href="{{ route('home.index') }}">Trang chủ</a>
                                 </li>
                                 <li class="has-dropdown">
-                                    <a href="blog.html">Blog</a>
+                                    <a href="#">Cửa hàng</a>
                                     <ul class="sub-menu">
-                                        <li><a href="blog.html">Blog Standard</a></li>
-                                        <li><a href="blog-grid.html">Blog Grid</a></li>
-                                        <li><a href="blog-details.html">Blog Details</a></li>
+                                        <li><a href="#">Team</a></li>
+                                        <li><a href="#">Shop</a></li>
+                                        <li><a href="#">Gallery</a></li>
+                                        <li><a href="#">Gallery Details</a></li>
                                     </ul>
                                 </li>
-                                <li class="has-dropdown">
-                                    <a href="#">Pages</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="team.html">Team</a></li>
-                                        <li><a href="shop.html">Shop</a></li>
-                                        <li><a href="gallery.html">Gallery</a></li>
-                                        <li><a href="gallery-details.html">Gallery Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{ route('home.contact') }}">Liên hệ</a></li>
                             </ul>
                         </nav>
                     </div>

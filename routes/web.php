@@ -43,6 +43,7 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('/', function () {
-    return view('client.index');
+Route::prefix('/')->name('home.')->group(function () {
+    Route::get('', 'Home\HomeController@index')->name('index');
+    Route::get('lien-he', 'Home\HomeController@contact')->name('contact');
 });

@@ -1,7 +1,7 @@
 (function ($) {
-	
+
 	'use strict';
-	
+
 	/*------------------------------------
 		Preloader
 	--------------------------------------*/
@@ -9,18 +9,18 @@
 		$('#preloader').delay(350).fadeOut('slow');
 		$('body').delay(350).css({'overflow': 'visible'});
 	});
-	
+
 	/*------------------------------------
 		Mobile Menu
 	--------------------------------------*/
 	$('.main-menu > ul>li').slice(-1).addClass('last-elements');
-	
+
 	$('#mobile-menu-active').metisMenu();
-	
+
 	$('#mobile-menu-active li.has-dropdown > a').on('click', function (e) {
 		e.preventDefault();
 	});
-	
+
 	$(".open-mobile-menu > a").on("click", function (e) {
 		e.preventDefault();
 		$(".slide-bar").toggleClass("show");
@@ -28,7 +28,7 @@
 		$('.body-overlay').addClass('active');
 		$(this).addClass('active');
 	});
-	
+
 	$(".close-mobile-menu > a").on("click", function (e) {
 		e.preventDefault();
 		$(".slide-bar").removeClass("show");
@@ -36,21 +36,21 @@
 		$('.body-overlay').removeClass('active');
 		$('.open-mobile-menu > a').removeClass('active');
 	});
-	
+
 	$('.body-overlay').on('click', function () {
 		$(this).removeClass('active');
 		$(".slide-bar").removeClass("show");
 		$("body").removeClass("on-side");
 		$('.open-mobile-menu > a').removeClass('active');
 	});
-	
+
 	$(".sidebar-open > a").on("click", function (e) {
 		e.preventDefault();
 		$(".slide-bar").toggleClass("show");
 		$("body").addClass("on-side");
 		$('.body-overlay').addClass('active');
 	});
-	
+
 	/*------------------------------------
 		Search bar
 	--------------------------------------*/
@@ -58,12 +58,12 @@
 		event.preventDefault();
 		$('.search-area').addClass('active');
 	});
-	
+
 	$('.search-close').on('click', function (event) {
 		event.preventDefault();
 		$('.search-area').removeClass('active');
 	});
-	
+
 	/*------------------------------------
 		popup img
 	--------------------------------------*/
@@ -73,16 +73,16 @@
 			enabled: true
 		}
 	});
-	
+
 	/*------------------------------------
 		popup video
 	--------------------------------------*/
 	$('.popup-video').magnificPopup({
 		type: 'iframe'
 	});
-	
-	
-	
+
+
+
 	/*------------------------------------
         Overlay Close
 	--------------------------------------*/
@@ -90,23 +90,23 @@
 		$("html, body").animate({scrollTop: 0}, 600);
 		return false;
 	});
-	
+
 	/*------------------------------------
         Home Slider
 	--------------------------------------*/
 	if (jQuery(".home-slider").length > 0) {
-		
+
 		var HomeSlider = $('.home-slider');
 		HomeSlider.on('init', function (e, slick) {
 			var $firstAnimatingElements = $('.home-slide:first-child').find('[data-animation]');
 			doAnimations($firstAnimatingElements);
 		});
-		
+
 		HomeSlider.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
 			var $animatingElements = $('.home-slide[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
 			doAnimations($animatingElements);
 		});
-		
+
 		HomeSlider.slick({
 			autoplay: true,
 			autoplaySpeed: 10000,
@@ -121,18 +121,18 @@
 		});
 	}
 	if (jQuery(".home-slider-2").length > 0) {
-		
+
 		var HomeSlider2 = $('.home-slider-2');
 		HomeSlider2.on('init', function (e, slick) {
 			var $firstAnimatingElements = $('.home-slide-2:first-child').find('[data-animation]');
 			doAnimations($firstAnimatingElements);
 		});
-		
+
 		HomeSlider2.on('beforeChange', function (e, slick, currentSlide, nextSlide) {
 			var $animatingElements = $('.home-slide-2[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
 			doAnimations($animatingElements);
 		});
-		
+
 		HomeSlider2.slick({
 			autoplay: true,
 			autoplaySpeed: 10000,
@@ -146,7 +146,7 @@
 			]
 		});
 	}
-	
+
 	function doAnimations(elements) {
 		var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 		elements.each(function () {
@@ -162,7 +162,7 @@
 			});
 		});
 	}
-	
+
 	/*------------------------------------
         Product Filter
 	--------------------------------------*/
@@ -176,23 +176,23 @@
 					columnWidth: '.grid-item'
 				}
 			});
-			
+
 			// filter items on button click
 			$('.product-filter-wrapper .product-filter-nav').on('click', 'button', function () {
 				let filterValue = $(this).attr('data-filter');
 				$grid.isotope({filter: filterValue});
 			});
-			
+
 			//for menu active class
 			$('.product-filter-wrapper .product-filter-nav button').on('click', function (event) {
 				$(this).siblings('.active').removeClass('active');
 				$(this).addClass('active');
 				event.preventDefault();
 			});
-			
+
 		});
 	}
-	
+
 	/*------------------------------------
         Product Filter
 	--------------------------------------*/
@@ -206,23 +206,23 @@
 					columnWidth: '.grid-item'
 				}
 			});
-			
+
 			// filter items on button click
 			$('.gallery-filter-wrapper .gallery-filter-nav').on('click', 'button', function () {
 				let filterValue = $(this).attr('data-filter');
 				$grid.isotope({filter: filterValue});
 			});
-			
+
 			//for menu active class
 			$('.gallery-filter-wrapper .gallery-filter-nav button').on('click', function (event) {
 				$(this).siblings('.active').removeClass('active');
 				$(this).addClass('active');
 				event.preventDefault();
 			});
-			
+
 		});
 	}
-	
+
 	/*------------------------------------
         Team Slider
 	--------------------------------------*/
@@ -264,7 +264,7 @@
 			]
 		});
 	}
-	
+
 	/*------------------------------------
         Testimonial Slider
 	--------------------------------------*/
@@ -280,7 +280,7 @@
 			nextArrow: '<button type="button" class="slick-next"><i class="far fa-arrow-right"></i></i></button>',
 		});
 	}
-	
+
 	if (jQuery(".testimonial-slider-2").length > 0) {
 		$('.testimonial-slider-2').slick({
 			slidesToShow: 1,
@@ -293,7 +293,7 @@
 			nextArrow: '<button type="button" class="slick-next"><i class="far fa-arrow-right"></i></i></button>',
 		});
 	}
-	
+
 	/*------------------------------------
         Team Slider
 	--------------------------------------*/
@@ -334,7 +334,7 @@
 			]
 		});
 	}
-	
+
 	/*------------------------------------
         Circular Bars - Knob
 	--------------------------------------*/
@@ -342,13 +342,13 @@
 		$('.knob').each(function () {
 			let $this = $(this),
 				knobVal = $this.attr('data-rel');
-			
+
 			$this.knob({
 				'draw': function () {
 					$(this.i).val(this.cv + '%')
 				}
 			});
-			
+
 			$this.appear(function () {
 				$({
 					value: 0
@@ -367,7 +367,7 @@
 			});
 		});
 	}
-	
+
 	/*------------------------------------
         countdown
 	--------------------------------------*/
@@ -377,7 +377,7 @@
 			$this.html(event.strftime('<span class="cdown days"><p>Days</p> <span class="time-count">%-D</span></span> <span class="cdown hour"><p>Hour</p> <span class="time-count">%-H</span></span> <span class="cdown minutes"><p>Min</p> <span class="time-count">%M</span></span> <span class="cdown second"><p>Sec</p> <span><span class="time-count">%S</span></span>'));
 		});
 	});
-	
+
 	/*------------------------------------
         Contact Map
 	--------------------------------------*/
@@ -555,22 +555,22 @@
 		// Get the HTML DOM element that will contain your map
 		// We are using a div with id="map" seen below in the <body>
 		var mapElement = document.getElementById('contact-map');
-		
+
 		// Create the Google Map using our element and options defined above
 		var map = new google.maps.Map(mapElement, mapOptions);
-		
+
 		// Let's also add a marker while we're at it
 		var marker = new google.maps.Marker({
 			position: new google.maps.LatLng(40.6700, -73.9400),
 			map: map,
-			icon: "assets/img/icon/map-marker.png",
+			icon: "assets/client/img/icon/map-marker.png",
 			title: 'Biver'
 		});
 	}
-	
+
 	if ($('#contact-map').length != 0) {
 		google.maps.event.addDomListener(window, 'load', basicmap);
 	}
-	
-	
+
+
 })(jQuery);
