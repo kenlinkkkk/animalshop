@@ -1,22 +1,8 @@
 <!DOCTYPE html>
-<!--
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4 & Angular 8
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
 <html lang="en">
 <!-- begin::Head -->
 
-<!-- Mirrored from keenthemes.com/metronic/preview/demo1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Nov 2019 10:20:55 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8"/><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
 <head>
     <meta charset="utf-8"/>
 
@@ -30,21 +16,21 @@ License: You must have a valid license purchased only from themeforest(the above
     <!--end::Fonts -->
 
     <!--begin::Page Vendors Styles(used by this page) -->
-    <link href="{{ asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('assets/admin/plugins/custom/fullcalendar/fullcalendar.bundle.css') }}" rel="stylesheet" type="text/css"/>
     <!--end::Page Vendors Styles -->
 
 
     <!--begin::Global Theme Styles(used by all pages) -->
-    <link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('assets/admin/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('assets/admin/css/style.bundle.css') }}" rel="stylesheet" type="text/css"/>
     <!--end::Global Theme Styles -->
 
     <!--begin::Layout Skins(used by all pages) -->
 
-    <link href="{{ asset('assets/css/skins/header/base/light.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('assets/css/skins/header/menu/light.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('assets/css/skins/brand/dark.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('assets/css/skins/aside/dark.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('assets/admin/css/skins/header/base/light.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('assets/admin/css/skins/header/menu/light.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('assets/admin/css/skins/brand/dark.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('assets/admin/css/skins/aside/dark.css') }}" rel="stylesheet" type="text/css"/>
     <!--end::Layout Skins -->
 
     <link rel="shortcut icon" href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/media/logos/favicon.ico"/>
@@ -61,7 +47,7 @@ License: You must have a valid license purchased only from themeforest(the above
 <div id="kt_header_mobile" class="kt-header-mobile  kt-header-mobile--fixed ">
     <div class="kt-header-mobile__logo">
         <a href="{{ route('admin.index') }}">
-            <img alt="Logo" src="{{ asset('assets/media/logos/logo-light.png') }}"/>
+            <img alt="Logo" src="{{ asset('assets/admin/media/logos/logo-light.png') }}"/>
         </a>
     </div>
     <div class="kt-header-mobile__toolbar">
@@ -151,7 +137,7 @@ License: You must have a valid license purchased only from themeforest(the above
                     <div class="kt-header__topbar-item dropdown">
                         <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="30px,0px" aria-expanded="true">
                             <span class="kt-header__topbar-icon kt-pulse kt-pulse--brand">
-                                <img src="{{ asset('assets/icon/noti.svg') }}" class="kt-svg-icon">
+                                <img src="{{ asset('assets/admin/icon/noti.svg') }}" class="kt-svg-icon">
                                 <span class="kt-pulse__ring"></span>
                             </span>
 {{--                Use dot badge instead of animated pulse effect:--}}
@@ -251,19 +237,19 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <!--begin::Global Theme Bundle(used by all pages) -->
 {{--<script src="{{ asset('js/app.js') }}" type="text/javascript"></script>--}}
-<script src="{{ asset('assets/plugins/global/plugins.bundle.js') }}" type="text/javascript"></script>
-<script src="{{ asset('assets/js/scripts.bundle.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/admin/plugins/global/plugins.bundle.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/admin/js/scripts.bundle.js') }}" type="text/javascript"></script>
 <!--end::Global Theme Bundle -->
 
 <!--begin::Page Vendors(used by this page) -->
-<script src="{{ asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/admin/plugins/custom/fullcalendar/fullcalendar.bundle.js') }}" type="text/javascript"></script>
 <script src="http://maps.google.com/maps/api/js?key=AIzaSyBTGnKT7dt597vo9QgeQ7BFhvSRP4eiMSM" type="text/javascript"></script>
-<script src="{{ asset('assets/plugins/custom/gmaps/gmaps.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/admin/plugins/custom/gmaps/gmaps.js') }}" type="text/javascript"></script>
 <!--end::Page Vendors -->
 
 <!--begin::Page Scripts(used by this page) -->
-<script src="{{ asset('assets/js/pages/dashboard.js') }}" type="text/javascript"></script>
-<script src="{{ asset('assets/js/pages/custom/user/profile.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/admin/js/pages/dashboard.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/admin/js/pages/custom/user/profile.js') }}" type="text/javascript"></script>
 
 <script>
     @if (session('success'))
@@ -287,6 +273,4 @@ License: You must have a valid license purchased only from themeforest(the above
 @yield('script')
 </body>
 <!-- end::Body -->
-
-<!-- Mirrored from keenthemes.com/metronic/preview/demo1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 27 Nov 2019 10:26:32 GMT -->
 </html>

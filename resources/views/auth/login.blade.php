@@ -14,20 +14,20 @@
 
 
     <!--begin::Page Custom Styles(used by this page) -->
-    <link href="{{ asset('assets/css/pages/login/login-2.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/admin/css/pages/login/login-2.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Page Custom Styles -->
 
     <!--begin::Global Theme Styles(used by all pages) -->
-    <link href="{{ asset('assets/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/admin/plugins/global/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/admin/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Theme Styles -->
 
     <!--begin::Layout Skins(used by all pages) -->
 
-    <link href="{{ asset('assets/css/skins/header/base/light.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/skins/header/menu/light.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/skins/brand/dark.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('assets/css/skins/aside/dark.css') }}" rel="stylesheet" type="text/css" />        <!--end::Layout Skins -->
+    <link href="{{ asset('assets/admin/css/skins/header/base/light.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/admin/css/skins/header/menu/light.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/admin/css/skins/brand/dark.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/admin/css/skins/aside/dark.css') }}" rel="stylesheet" type="text/css" />        <!--end::Layout Skins -->
 
     <link rel="shortcut icon" href="https://keenthemes.com/metronic/themes/metronic/theme/default/demo1/dist/assets/media/logos/favicon.ico" />
 </head>
@@ -39,12 +39,12 @@
 <!-- begin:: Page -->
 <div class="kt-grid kt-grid--ver kt-grid--root">
     <div class="kt-grid kt-grid--hor kt-grid--root kt-login kt-login--v2 kt-login--signin" id="kt_login">
-        <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" style="background-image: url({{ asset('assets/media/bg/bg-1.jpg') }});">
+        <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" style="background-image: url({{ asset('assets/admin/media/bg/bg-1.jpg') }});">
             <div class="kt-grid__item kt-grid__item--fluid kt-login__wrapper">
                 <div class="kt-login__container">
                     <div class="kt-login__logo">
                         <a href="#">
-                            <img src="{{ asset('assets/media/logos/logo-mini-2-md.png') }}">
+                            <img src="{{ asset('assets/admin/media/logos/logo-mini-2-md.png') }}">
                         </a>
                     </div>
                     <div class="kt-login__signin">
@@ -123,12 +123,12 @@
                             </div>
                         </form>
                     </div>
-                    <div class="kt-login__account">
-					<span class="kt-login__account-msg">
-						Don't have an account yet ?
-					</span>&nbsp;&nbsp;
-                        <a href="javascript:;" id="kt_login_signup" class="kt-link kt-link--light kt-login__account-link">Sign Up</a>
-                    </div>
+{{--                    <div class="kt-login__account">--}}
+{{--					<span class="kt-login__account-msg">--}}
+{{--						Don't have an account yet ?--}}
+{{--					</span>&nbsp;&nbsp;--}}
+{{--                        <a href="javascript:;" id="kt_login_signup" class="kt-link kt-link--light kt-login__account-link">Sign Up</a>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>
@@ -172,13 +172,13 @@
 <!-- end::Global Config -->
 
 <!--begin::Global Theme Bundle(used by all pages) -->
-<script src="{{ asset('assets/plugins/global/plugins.bundle.js') }}" type="text/javascript"></script>
-<script src="{{ asset('assets/js/scripts.bundle.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/admin/plugins/global/plugins.bundle.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/admin/js/scripts.bundle.js') }}" type="text/javascript"></script>
 <!--end::Global Theme Bundle -->
 
 
 <!--begin::Page Scripts(used by this page) -->
-<script src="{{ asset('assets/js/pages/custom/login/login-general.js') }}" type="text/javascript"></script>
+<script src="{{ asset('assets/admin/js/pages/custom/login/login-general.js') }}" type="text/javascript"></script>
 <!--end::Page Scripts -->
 </body>
 <!-- end::Body -->

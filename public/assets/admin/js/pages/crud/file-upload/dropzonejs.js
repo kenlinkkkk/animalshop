@@ -11,6 +11,9 @@ var KTDropzoneDemo = {
                 "justinbieber.jpg" == e.name ? o("Naha, you don't.") : o()
             }
         }), $("#kt_dropzone_2").dropzone({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
             url: "https://keenthemes.com/scripts/void.php",
             paramName: "file",
             maxFiles: 10,

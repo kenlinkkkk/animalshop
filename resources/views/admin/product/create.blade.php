@@ -100,19 +100,19 @@
 
 @section('script')
     <script type="text/javascript" src="{{ asset('assets/js/pages/crud/file-upload/dropzonejs.js') }}"></script>
-{{--    <script>--}}
-{{--        Dropzone.options.myDropzone = {--}}
-{{--            url: '{{ route('admin.upload') }}',--}}
-{{--            header: {--}}
-{{--                'X-CSRF-TOKEN': '{!! csrf_token() !!}'--}}
-{{--            },--}}
-{{--            autoProcessQueue: true,--}}
-{{--            uploadMultiple: true,--}}
-{{--            parallelUploads: 5,--}}
-{{--            maxFiles: 10,--}}
-{{--            maxFileSize: 5,--}}
-{{--            acceptedFiles: ".jpeg, .jpg, .gif, .png",--}}
-{{--            dictFileTooBig: 'Ảnh vượt quá 5MB',--}}
-{{--        }--}}
-{{--    </script>--}}
+    <script>
+        {{--$("#kt_dropzone_2").dropzone({--}}
+        {{--    headers: {--}}
+        {{--        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')--}}
+        {{--    },--}}
+        {{--    url: "{{ route('admin.upload') }}",--}}
+        {{--    paramName: "file",--}}
+        {{--    maxFiles: 10,--}}
+        {{--    maxFilesize: 10,--}}
+        {{--    addRemoveLinks: !0,--}}
+        {{--    accept: function (e, o) {--}}
+        {{--        "justinbieber.jpg" == e.name ? o("Naha, you don't.") : o()--}}
+        {{--    }--}}
+        {{--})--}}
+    </script>
 @endsection
