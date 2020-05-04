@@ -31,7 +31,7 @@
             <div class="row">
                 <div class="col-xl-2 col-lg-3 col-md-4 col-6">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="{{ route('home.index') }}">
                             <img src="{{ asset('assets/client/img/logo/logo.png') }}" alt="logo">
                         </a>
                     </div>
