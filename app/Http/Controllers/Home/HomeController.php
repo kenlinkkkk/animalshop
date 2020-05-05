@@ -32,6 +32,11 @@ class HomeController extends Controller
         return view('client.content.contact');
     }
 
+    public function shop()
+    {
+        return view('client.content.shop');
+    }
+
     public function addToCart(Request $request)
     {
 
